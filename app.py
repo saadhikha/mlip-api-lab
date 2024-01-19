@@ -14,7 +14,9 @@ def analysis():
     # Try to get the URI from the JSON
     try:
         get_json = request.get_json()
-        image_uri = get_json['uri']
+        image_uri = image_uri = "http://jeroen.github.io/images/testocr.png"
+#get_json.get['uri']
+        print("got uri")
     except:
         return jsonify({'error': 'Missing URI in JSON'}), 400
     
